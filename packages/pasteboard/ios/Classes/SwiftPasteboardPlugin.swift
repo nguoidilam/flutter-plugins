@@ -33,7 +33,7 @@ public class SwiftPasteboardPlugin: NSObject, FlutterPlugin {
 
   private func image(result: FlutterResult) {
     let image = UIPasteboard.general.image
-    let data =  image?.pngData()
+    let data =  image?.jpegData(compressionQuality: 0)
     result(data)
   }
 
